@@ -1,5 +1,19 @@
 language: node_js
 node_js:
  - "0.12"
- - "0.10"
 script: make test-coveralls
+env:
+  global:
+    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+    #   via the "travis encrypt" command using the project repo's public key
+    - secure: "osfLK33cYR/+ahivA/F5plxmG8jNCKPpd2efLYhs/DmHj9sYPl1fo7NmhH57PH8+0csXwtZjYEF+jORY6Qi0L22Jd9DVGdQhSFzqVTMSsMjNMdJQvgTVgpXWljlbG1ffpyQi1yqs2cIxeaylr4QJJyEAJ/ui4BcSg+Rz8+vwUX9mVXF6HfKNYugbiAQY5eptjFHhzBgWLP7cCem2EhvGaorPUtojL/Ed/JgMFlQC9vK2hJtZsixATNQzY99/DYMTEoLCfiSyLgy93HAQ/+u6krFB5aTd19svq0Iwia6tMIAN7s0xKqH46ur4gBODYMPV2pAGW214YraIs23FU9M+dyTjY87VqJI9HLRwrRD8uzlnkBOPnehXW05R5KCINFfRFq1aBjwVBOizsKn+VGMwJ2oco3ithT+0icm44kvbTygrauu6hwp0jtt0yz4RoeKDplo9RL1Rf1+Gi4Yv6ZK9Ai0YRkP1x8OTex+hhJi1WHPhyBm11txT7GMScuoFM3JZ/2Oq3rBxMr05E7/MsYlpZSGmOeCZMf07wc80bv00lT5L4UXOQ0FQBbJJ2k/aEsno/MaxFMMz1p0zDcAcgGHBPhG70zGkTPPBhTX/t40JzWSnSY0ZjnuFYy8x5/kUtk4/36oLAwgKzr40D/IWvsxXRNmrZNyg61S07cGUwwoY5FM="
+addons:
+  coverity_scan:
+    project:
+      name: "maskit/hpack"
+      description: "<Your project description here>"
+      notification_email: m4sk17@gmail.com
+      build_command_prepend: ""
+      build_command:   ""
+      branch_pattern: master
+
