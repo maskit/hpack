@@ -14,6 +14,6 @@ addons:
       description: "<Your project description here>"
     notification_email: m4sk17@gmail.com
     build_command_prepend: ""
-    build_command:   ""
+    build_command:   "make"
     branch_pattern: master
 
